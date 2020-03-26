@@ -8,6 +8,8 @@
  http://ascii-table.com/ansi-escape-sequences.php
  http://www.termsys.demon.co.uk/vtansi.htm
  http://braun-home.net/michael/info/misc/VT100_commands.htm
+ https://en.wikipedia.org/wiki/ANSI_escape_code
+ Colors: http://softwarelivre.org/terceiro/blog/a-visual-cheat-sheet-for-ansi-color-codes
  */
 
 #ifndef VT100_H
@@ -34,31 +36,31 @@
 //characters
 #define ANSI_OCA			"\x1B[m"	//Turn off character attributes
 #define ANSI_BMO			"\x1B[1m"	//Turn bold mode on
-#define ANSI_LIM			"\x1B[2m"	//Turn low intensity mode on
+#define ANSI_LIM			"\x1B[2m"	//Turn low intensity mode on (bold off)
 #define ANSI_UM				"\x1B[4m"	//Turn underline mode on
 #define ANSI_BM				"\x1B[5m"	//Turn blinking mode on
 #define ANSI_RV				"\x1B[7m"	//Turn reverse video on
 #define ANSI_ITM			"\x1B[8m"	//Turn invisible text mode on
 
 //foreground color
-#define ANSI_F_BLACK		"\x1B[30"	//black
-#define ANSI_F_RED			"\x1B[31"	//red
-#define ANSI_F_GREEN		"\x1B[32"	//green
-#define ANSI_F_YELLOW		"\x1B[33"	//Yellow
-#define ANSI_F_BLUE			"\x1B[34"	//Blue
-#define ANSI_F_MAGENTA		"\x1B[35"	//Magenta
-#define ANSI_F_CYAN			"\x1B[36"	//Cyan
-#define ANSI_F_WHITE		"\x1B[37"	//White
+#define ANSI_F_BLACK		"\x1B[30m"	//black
+#define ANSI_F_RED			"\x1B[31m"	//red
+#define ANSI_F_GREEN		"\x1B[32m"	//green
+#define ANSI_F_YELLOW		"\x1B[33m"	//Yellow
+#define ANSI_F_BLUE			"\x1B[34m"	//Blue
+#define ANSI_F_MAGENTA		"\x1B[35m"	//Magenta
+#define ANSI_F_CYAN			"\x1B[36m"	//Cyan
+#define ANSI_F_WHITE		"\x1B[37m"	//White
 
 //background color
-#define ANSI_B_BLACK		"\x1B[40"	//black
-#define ANSI_B_RED			"\x1B[41"	//red
-#define ANSI_B_GREEN		"\x1B[42"	//green
-#define ANSI_B_YELLOW		"\x1B[43"	//Yellow
-#define ANSI_B_BLUE			"\x1B[44"	//Blue
-#define ANSI_B_MAGENTA		"\x1B[45"	//Magenta
-#define ANSI_B_CYAN			"\x1B[46"	//Cyan
-#define ANSI_B_WHITE		"\x1B[47"	//White
+#define ANSI_B_BLACK		"\x1B[40m"	//black
+#define ANSI_B_RED			"\x1B[41m"	//red
+#define ANSI_B_GREEN		"\x1B[42m"	//green
+#define ANSI_B_YELLOW		"\x1B[43m"	//Yellow
+#define ANSI_B_BLUE			"\x1B[44m"	//Blue
+#define ANSI_B_MAGENTA		"\x1B[45m"	//Magenta
+#define ANSI_B_CYAN			"\x1B[46m"	//Cyan
+#define ANSI_B_WHITE		"\x1B[47m"	//White
 
 //cursor position
 #define ANSI_CUU(n)			"\x1B[nA"	//Move cursor up n lines
