@@ -50,3 +50,12 @@ void SGR2(int val1, val2){
 void SGR3(int val1, val2, val3){
 	printf("\x1B[%u;%u;%um", val1, val2, val3);
 }
+
+/*
+ * Reset attributes, clear screen and go top/left
+ */
+void ClsScr(void){
+	printf(ANSI_RESET_ATTR);
+	printf(ANSI_CLS);
+	printf(ANSI_HOME);
+}

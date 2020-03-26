@@ -61,17 +61,20 @@
 #define ANSI_LED3_ON		"\x1B[3q"	//Turn on LED 3
 #define ANSI_LED4_ON		"\x1B[4q"	//Turn on LED 4
 
-//constants for moveCursorRelative
+//attributes
+#define ANSI_RESET_ATTR		"\x1B[m"	//Reset all attributes
+
+//constants for moveCursorRelative())
 #define ANSI_CUR_UP			'A'
 #define ANSI_CUR_DOWN		'B'
 #define ANSI_CUR_RIGHT		'C'
 #define ANSI_CUR_LEFT		'D'
 
-//constants for moveLine
+//constants for moveLine()
 #define ANSI_LINE_DOWN		'E'
 #define ANSI_LINE_UP		'F'
 
-//constants for SGR
+//constants for SGR()
 #define ANSI_RST_ATTR		0	//Reset all attributes
 #define ANSI_BOLD			1	//Bold font
 #define ANSI_DIM			2	//Dim font
