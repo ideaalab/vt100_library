@@ -59,3 +59,19 @@ void ClsScr(void){
 	printf(ANSI_CLS);
 	printf(ANSI_HOME);
 }
+
+/*
+ * Color test, shown on terminal
+ */
+void ColorTest(void){
+	for(int attr = 0; attr < 2; attr++){
+		for(int fg = 30; fg < 38; fg++){
+			for(int bg = 40; bg < 48; bg++){
+				printf("\x1B[%u;%u;%um", attr, fg, bg);	//change color
+				printf("%u;%u;%u", attr, fg, bg);		//write color on screen
+				printf("\x1B[m ");						//reset values and print space			
+			}
+			printf("\r\n");								//new line
+		}
+	}
+}
